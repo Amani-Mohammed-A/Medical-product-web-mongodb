@@ -1,0 +1,84 @@
+
+
+<link rel="stylesheet" href="mystyle.css">
+
+
+
+
+
+<center><h1>Welcome to our website</h1></center>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img  src="https://talabiah.com/wp-content/uploads/2018/04/%D9%83%D8%B1%D8%B3%D9%8A-%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-%D9%85%D8%AA%D8%AD%D8%B1%D9%83-%D8%AE%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D9%88%D8%B2%D9%8611.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://img.ebdcdn.com/product/front/white/pl6605.jpg?im=Resize,width=700,height=350,aspect=fill;UnsharpMask,sigma=1.0,gain=1.0" style="width:100%">
+   
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://cdn.spama.com/image/cache/catalog/spama/products/01040100001-500x500.jpg.webp" style="width:100%">
+  
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="https://www.arkanlabs.com/image/cache/catalog/electric-hospital-bed-31699-460x337.jpg" style="width:100%">
+  
+  </div>
+  </div>
+  <br>
+  
+<h1 class="display-4">Last products </h1>
+    </div>
+  </div>
+</div>
+
+    <div class="card-deck">
+      <% for(let p of main){ %>
+       <div class="card">
+        <img src="<%=p.img%>" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title"><%=p.name%></h5>
+        </div>
+        </div>
+       <%}%>
+</div>
+  
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 1000); 
+  }
+  </script>
+  
+    </div>
+  </div>
+
+  
+  <%- include("partials/footer")%>

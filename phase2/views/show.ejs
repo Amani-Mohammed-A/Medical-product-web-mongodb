@@ -1,0 +1,18 @@
+<%- include("partials/header")%>
+<div style="background: linear-gradient(to right, #f6faf8,#b8b984);"  >
+<div >
+  <p class="display-4" > <%= p.name%> </p>
+</div>
+  <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"><img src="<%=p.img%>" height="2000" width="2000" alt="..." class="img-thumbnail" style="float: left;margin-left: 10px;margin-right: 10px; margin-bottom: 5px ;
+ border: solid rgb(67, 111, 65) 1px; padding: 2px" ></th>
+      <th  scope="col"><h3 > <%= p.description %> </h3></th>
+    </tr>
+  </thead>
+</table>
+  
+</div>
+  
+<%- include("partials/footer")%>

@@ -1,0 +1,25 @@
+<%- include("partials/header")%>
+<link rel="stylesheet" href="mystyle.css">
+<div>
+  <h2 > Our Products</h2>
+</div>
+
+    <div class="card-deck">
+      <% for(let p of prod){ %>
+          <div class="card">
+        <img src="<%=p.img%>" class="card-img-top" alt="...">
+        <br><br><br>
+        <div class="card-body">
+          
+        <h3 class="card-title" ><a class="btn btn-outline-dark" href="/products/<%=p._id%>"><%=p.name%></a></h3>
+        </div>
+        </div>
+       <%}%>
+     </div>
+  
+	
+		
+				
+  
+
+<%- include("partials/footer")%>

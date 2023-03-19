@@ -1,0 +1,31 @@
+<%- include("partials/header")%>
+<link rel="stylesheet" href="contactcss.css">
+<br><br>
+
+<form action="/" method="POST">
+<div class="container3">
+  <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <label for="email">City</label>
+        <select class="form-control" name="City" id="exampleFormControlSelect1">
+          <% for(let p of array){ %>
+          <option><%=p%></option>
+          <%}%>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <input type="submit" value="Submit">
+    
+  </div>
+</div>
+</form>
+
+   
+  
+<%- include("partials/footer")%>
